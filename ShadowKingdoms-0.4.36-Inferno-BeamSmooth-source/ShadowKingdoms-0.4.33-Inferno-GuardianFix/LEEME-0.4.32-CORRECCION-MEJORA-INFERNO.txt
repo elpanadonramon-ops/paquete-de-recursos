@@ -1,0 +1,12 @@
+ShadowKingdoms 0.4.32 - Corrección de mejora de Inferno
+
+Cambios:
+- Evita iniciar o cobrar dos veces una mejora mientras ya hay una mejora activa.
+- La interacción con la Inferno informa el tiempo restante y no permite abrir su menú durante la mejora.
+- El holograma muestra "Mejorando a nivel II/III" y porcentaje de progreso.
+- La munición sigue visible en una cuarta línea durante la mejora.
+- Guarda el instante de inicio de la mejora para calcular el progreso y restaurarlo después de reiniciar.
+- Al finalizar, aplica el nivel nuevo y la durabilidad máxima correspondiente.
+
+Se conservan las estadísticas y costes definidos en 0.4.31.
+Compilar con: mvn clean package

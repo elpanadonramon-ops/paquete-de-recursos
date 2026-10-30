@@ -1,0 +1,16 @@
+name: ShadowKingdoms
+version: 0.4.35
+main: com.gncraft.shadowkingdoms.ShadowKingdoms
+api-version: '1.21'
+author: GNcraft
+description: Reinos, territorios, mejoras extra, Piedras Lunares y ShadowMail integrado en el Nexo.
+softdepend: [PlaceholderAPI]
+commands:
+  sk:
+    description: Comandos de ShadowKingdoms
+    usage: /sk
+    aliases: [shadowkingdoms]
+permissions:
+  shadowkingdoms.admin:
+    description: Administrar ShadowKingdoms
+    default: op

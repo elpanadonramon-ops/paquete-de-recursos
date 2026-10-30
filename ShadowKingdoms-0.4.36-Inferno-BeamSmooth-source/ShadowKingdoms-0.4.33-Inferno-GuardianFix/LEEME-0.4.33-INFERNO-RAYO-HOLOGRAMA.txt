@@ -1,0 +1,17 @@
+ShadowKingdoms 0.4.33 - Correcciones de la torreta Inferno
+
+CAMBIOS
+- Sustituye el Elder Guardian por un Guardian oceánico normal para eliminar el jumpscare.
+- El Guardian auxiliar se mantiene invisible, silencioso, sin colisión y con gravedad desactivada.
+- Su posición se fija continuamente en el centro de la torreta; el objetivo se asigna al mismo Guardian para que el rayo visual nazca desde la Inferno.
+- El daño nativo del rayo del Guardian se cancela mediante PersistentDataContainer; el daño progresivo lo sigue aplicando ShadowKingdoms.
+- Al perder el objetivo se limpia el objetivo del Guardian, sin eliminar/recrear la entidad en cada tick.
+- Al iniciar el plugin se limpian Guardianes auxiliares antiguos y ArmorStands holográficos anteriores para evitar duplicados persistentes.
+- Las líneas del holograma solo actualizan el nombre cuando el texto cambia, evitando actualizaciones innecesarias.
+
+COMPILACION
+Ejecuta: mvn clean package
+JAR esperado: target/ShadowKingdoms-0.4.33.jar
+
+NOTA
+El ZIP contiene el código fuente actualizado. Debe compilarse y probarse en Paper/Purpur 1.21.11. La apariencia exacta del rayo depende del comportamiento del Guardian de la versión del servidor.

@@ -1,0 +1,23 @@
+SHADOWKINGDOMS 0.4.30 — REPARACIÓN DE CAÑONES
+
+Cambios:
+- Al llegar a 0/300 de durabilidad, el cañón ya no se elimina.
+- El holograma muestra ROTO debajo de la línea de durabilidad.
+- Un cañón averiado no dispara, aunque conserve munición.
+- Un miembro del reino puede abrir el menú del cañón y pulsar Reparar cañón.
+- La reparación dura 120 segundos y restaura 300/300 de durabilidad.
+- El temporizador de reparación se guarda en kingdoms.yml y continúa contando tras reiniciar el servidor.
+- Mientras está averiado, no se permite recargar ni mejorar el cañón.
+
+La reparación es gratuita en esta versión.
+
+Compilación en CMD con Maven de IntelliJ IDEA 2026.2.3:
+cd /d "C:\Users\Admin\Downloads\ShadowKingdoms-0.4.30-source\ShadowKingdoms-0.4.30-source" && "C:\Program Files\JetBrains\IntelliJ IDEA 2026.2.3\plugins\maven-plugin\lib\maven3\bin\mvn.cmd" clean package
+
+El JAR se genera en target\ShadowKingdoms-0.4.30.jar
+
+
+CAMBIO 0.4.30 - COSTE DE REPARACION
+- Cada inicio de reparacion descuenta 150 PL del saldo del reino.
+- Si el reino no tiene 150 PL, no se inicia la reparacion ni se descuenta dinero.
+- El coste se cobra una sola vez al iniciar; la reparacion dura 120 segundos y restaura 300/300.

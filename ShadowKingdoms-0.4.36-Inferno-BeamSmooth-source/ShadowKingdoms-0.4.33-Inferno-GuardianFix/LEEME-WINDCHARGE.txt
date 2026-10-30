@@ -1,0 +1,20 @@
+ShadowKingdoms 0.4.28 - Ajuste de daño por Wind Charge
+
+Cambios incluidos:
+- Se elimina el registro duplicado del scheduler de tickWindChargeCollisions().
+- Se corrige la secuencia literal \\n que estaba incrustada en la línea de registro del scheduler y rompía la compilación.
+- Se reconoce explícitamente WIND_CHARGE y BREEZE_WIND_CHARGE (además de nombres compatibles terminados en _WIND_CHARGE).
+- Se conserva la detección por ProjectileHitEvent y el barrido de trayectoria entre ticks.
+- Se garantiza que un proyectil solo descuente 50 puntos una vez.
+- Se comprueba si el atacante es miembro/aliado antes de marcar el proyectil como procesado.
+- Se conserva el guardado de durabilidad, actualización del holograma y destrucción al llegar a 0.
+
+Mecánica:
+Durabilidad inicial: 300.
+Daño por impacto: 50.
+Impactos necesarios para destruirla: 6.
+
+Nota importante:
+El JAR de KingdomsX analizado no permitió confirmar un detector específico de Wind Charge: no se encontró una referencia directa a esa entidad en sus clases. Por ello, esta entrega replica el comportamiento observable solicitado (50 de daño por impacto y persistencia), mediante detección propia compatible con Paper/Purpur 1.21.11; no afirma copiar internamente el algoritmo de KingdomsX.
+
+No se pudo ejecutar Maven en este entorno porque no está instalado y no se dispone de Maven Wrapper en el proyecto. El ZIP contiene el código fuente corregido; debe compilarse en IntelliJ IDEA con Maven antes de instalarlo en el servidor.

@@ -1,0 +1,19 @@
+ShadowKingdoms - Preparación del rayo visual de la Torreta Inferno
+
+Se añadió InfernoGuardianDamageListener.
+
+- Cancela EntityDamageByEntityEvent cuando el atacante es un Guardian/Elder Guardian
+  marcado con el PersistentDataContainer de ShadowKingdoms como visual_only.
+- No cancela el daño de guardianes normales del mundo.
+- markVisualOnly(ElderGuardian) marca la entidad y configura invisibilidad, silencio,
+  persistencia y ausencia de colisión.
+
+IMPORTANTE:
+Esta entrega prepara la primera pieza técnica. Todavía no crea ni coloca la torreta
+Inferno ni genera su Elder Guardian. Cuando se implemente el spawn de la entidad,
+se deberá llamar a:
+
+    infernoGuardianDamageListener.markVisualOnly(guardian);
+
+El listener cancela el daño nativo de los rayos marcados; el daño progresivo de la
+Inferno deberá aplicarse por separado desde el administrador de la torreta.
